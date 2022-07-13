@@ -7,13 +7,12 @@ const showData = (result) =>{
     }    
     
   }
+
   if(result["status"] == "Habilitada"){
-    $('#toggle-one').bootstrapToggle('off'),
-    document.querySelector("#status").backgroundcolor = "green"
+    $('#toggle-one').bootstrapToggle('off')
   }
   else{
-    $('#toggle-one').bootstrapToggle('on'),
-    document.querySelector("#status").backgroundcolor = "green";
+    $('#toggle-one').bootstrapToggle('on')
   }
 }
 
@@ -26,13 +25,15 @@ ID_eNotas.addEventListener("blur",(e)=>{
       mode: 'cors',
       cache: 'default'
     }
+    
   };
-  
+
     fetch(`https://api.enotasgw.com.br/v1/empresas/${ID_eNotas.value}/`, options)
     .then(response => response.json())
     //.then(response => console.log(response))
     .then(response => showData(response))
     .catch(err => console.error(err));
+
 }) 
 
 $('#toggle1 input:checkbox').change(function(){
@@ -46,4 +47,24 @@ $('#toggle1 input:checkbox').change(function(){
   }
 
 })
+
+function Mudarestado(id, status_tela) {
+  
+  /*var display = document.getElementById(id).style.display;
+  if(display == "none"){
+      document.getElementById(id).style.display = 'block';
+  }
+  else{
+      document.getElementById(id).style.display = 'none';
+      console.log("Chamar um Modal para Cliente não encontrado")
+  }*/
+
+  if(status_resultado){
+    document.getElementById(id).style.display = 'block';
+  }
+  else{
+    document.getElementById(id).style.display = 'nome';
+  }
+
+}
 
