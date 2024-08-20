@@ -22,7 +22,7 @@ ID_eNotas.addEventListener("blur",(e)=>{
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      Authorization: 'Basic ODBlYzcwNmQtN2Y3Mi00YzhhLWEwYjgtOGM5Y2FjNGEwMTAw',
+      Authorization: 'Basic ',
       mode: 'cors',
       cache: 'default'
     }
