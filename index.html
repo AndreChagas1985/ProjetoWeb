@@ -125,21 +125,17 @@
     </div>
 
     <script>
-  window.intercomSettings = {
-    api_base: "https://api-iam.intercom.io",
-    app_id: "sj4alqnu",
-    user_id: user.id, // IMPORTANTE: substitua "user.id" pela variável que você utiliza para capturar o ID do usuário.
-    name: user.name, // IMPORTANTE: substitua "user.name" pela variável que você usa para capturar o nome do usuário
-    email: user.email, // IMPORTANTE: substitua "user.email" pela variável que você usa para capturar o endereço de e-mail do usuário
-    created_at: user.createdAt, // IMPORTANTE: substitua "user.createdAt" pela variável que você usa para capturar a data de inscrição do usuário
-  };
-</script>
-
-
-<script>
-  // Preenchemos previamente o ID do seu aplicativo no URL do widget: 'https://widget.intercom.io/widget/sj4alqnu'
-  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/sj4alqnu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "sj4alqnu",
+        };
+      </script>
+      
+      
+      <script>
+        // Preenchemos previamente o ID do seu aplicativo no URL do widget: 'https://widget.intercom.io/widget/sj4alqnu'
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/sj4alqnu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
 
   <div class="class"></div>
 
