@@ -3,85 +3,142 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta eNotas</title>
+    <title>EVA - Inteligência Artificial da ABC Evo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Poppins','Poppins-Medium', 'Poppins-Regular';
+            margin: 0;
+            padding: 0;
+            background-size: 100%;
+            background-image: url("https://abcfinancial-my.sharepoint.com/personal/andre_chagas_abcfitness_com/Documents/PowerBI/Conte%C3%BAdo%20site%20html/Tela%20Eva_monitor_IHRSA%202024_background.png");
+            color: white;
+        }
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css"  href="estilo.css" />
-    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo para o logo */
+        .logo img {
+          position: absolute;
+            top: 30px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        /* Estilo para o banner */
+        .banner img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        /* Estilo para o texto central */
+        .central-text h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .central-text p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #7A5FFF;
+            font-weight: bold;
+        }
+
+        /* Conteúdo adicional (balões de fala e imagem de celular) */
+        .additional-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .text-bubble {
+            background: #ffffff10;
+            border-radius: 10px;
+            padding: 20px;
+            margin-right: 20px;
+            max-width: 50%;
+        }
+
+        .phone-image img {
+            width: 200px;
+            border-radius: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .additional-content {
+                flex-direction: column;
+            }
+
+            .text-bubble {
+                margin: 0 0 20px 0;
+                max-width: 100%;
+            }
+
+            .phone-image img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="hero-unit">
-        
-            <h2>Consulta Empresa eNotas</h2>
-            
-            <form>
-
-                <div class="form-group">
-                    <label for="ID_eNotas">ID eNotas</label>
-                    <input type="text" class="form-control" id="id">
-                    <small></small>
-                </div>
-                <div class="form-group">
-                    <label for="Razao_Social">Razão Social</label>
-                    <input type="text" class="form-control" id="razaoSocial">
-                    <small></small>
-                </div>
-                <div class="form-group">
-                    <label for="Nome_Fantasia">Nome Fantasia</label>
-                    <input type="text" class="form-control" id="nomeFantasia">
-                    <small></small>
-                </div>
-                <div class="form-group">
-                    <label for="CNPJ">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpj">
-                    <small></small>
-                </div>
-                <div class="form-group">
-                    <label for="Status">Status</label>
-                    <input type="text" class="form-control" id="status">
-                    <small></small>
-                </div>
-                
-                <div class="form-group" id="toggle1">
-                    <input type="checkbox" data-toggle="toggle" data-on="Habilitar" data-off="Desabilitar" checked="true" id="toggle-one" data-onstyle="success" data-offstyle="danger">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalV1">Infos. V1</button>
-                </div>            
-
-                <!-- Modal -->
-                <div class="modal fade" id="ModalV1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Informações da Empresa V1</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            
-            
-            </form>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://abcfinancial-my.sharepoint.com/personal/andre_chagas_abcfitness_com/Documents/PowerBI/Conte%C3%BAdo%20site%20html/Logo%20ABC%20Evo.png" alt="Logo ABC Evo">
         </div>
-    </div>   
-    <script src="main.js"></script> 
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="https://abcfinancial-my.sharepoint.com/personal/andre_chagas_abcfitness_com/Documents/PowerBI/Conte%C3%BAdo%20site%20html/Tela%20Eva_monitor_IHRSA%202024_Hero.png" alt="Banner EVA">
+        </div>
+
+        <!-- Texto central -->
+        <div class="central-text">
+            <h2><b>Eva:</b> A inteligência Artificial da ABC EVO</h2><br><br>
+            <p><span class="highlight">+ 21 mil</span> chats resolvidos no</p><p> ano de 2024</p>
+            <p><span class="highlight">70%</span> de satisfação</p>
+            <p>Disponível <span class="highlight">24h</span> por dia,</p>
+            <p> <span class="highlight">7 dias</span> por semana</p>
+            <p><span class="highlight">Agilidade</span></p><p>no atendimento</p>
+        </div>
+
+        <!-- Conteúdo adicional (balões de fala e imagem de celular) -->
+        
+    </div>
+
+    <script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "sj4alqnu",
+        };
+      </script>
+      
+      
+      <script>
+        // Preenchemos previamente o ID do seu aplicativo no URL do widget: 'https://widget.intercom.io/widget/sj4alqnu'
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/sj4alqnu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
+
+  <div class="class"></div>
+
+	
 </body>
 </html>
