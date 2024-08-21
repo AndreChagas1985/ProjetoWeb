@@ -9,7 +9,7 @@
     <style>
         /* Estilos gerais */
         body {
-            font-family: 'Poppins','Poppins-Medium', 'Poppins-Regular';
+            font-family: 'Poppins', 'Poppins-Medium', 'Poppins-Regular';
             margin: 0;
             padding: 0;
             background-size: 100%;
@@ -25,7 +25,7 @@
 
         /* Estilo para o logo */
         .logo img {
-          position: absolute;
+            position: absolute;
             top: 30px;
             left: 20px;
             width: 100px;
@@ -41,17 +41,21 @@
         }
 
         /* Estilo para o texto central */
+        .central-text {
+            text-align: center;
+        }
+
         .central-text h2 {
             font-size: 1.5em;
             margin-bottom: 20px;
             margin-top: 0px;
             color: #fff;
-            text-align: center;
         }
 
         .central-text p {
             font-size: 1.1em;
             margin: 10px 0;
+            line-height: 1.6em;
         }
 
         .highlight {
@@ -82,6 +86,20 @@
 
         /* Responsividade */
         @media (max-width: 768px) {
+            .logo img {
+                top: 20px;
+                left: 10px;
+                width: 80px;
+            }
+
+            .central-text h2 {
+                font-size: 1.2em;
+            }
+
+            .central-text p {
+                font-size: 1em;
+            }
+
             .additional-content {
                 flex-direction: column;
             }
@@ -112,33 +130,60 @@
 
         <!-- Texto central -->
         <div class="central-text">
-            <h2><b>Eva:</b> A inteligência Artificial da ABC EVO</h2><br><br>
-            <p><span class="highlight">+ 21 mil</span> chats resolvidos no</p><p> ano de 2024</p><br><br>
-            <p><span class="highlight">70%</span> de satisfação</p><br><br>
-            <p>Disponível <span class="highlight">24h</span> por dia,</p>
-            <p> <span class="highlight">7 dias</span> por semana</p><br><br>
-            <p><span class="highlight">Agilidade</span></p><p>no atendimento</p>
+            <h2><b>Eva:</b> A inteligência Artificial da ABC EVO</h2>
+            <p><span class="highlight">+ 21 mil</span> chats resolvidos no ano de 2024</p>
+            <p><span class="highlight">70%</span> de satisfação</p>
+            <p>Disponível <span class="highlight">24h</span> por dia, <span class="highlight">7 dias</span> por semana</p>
+            <p><span class="highlight">Agilidade</span> no atendimento</p>
         </div>
 
         <!-- Conteúdo adicional (balões de fala e imagem de celular) -->
-        
     </div>
 
     <script>
         window.intercomSettings = {
-          api_base: "https://api-iam.intercom.io",
-          app_id: "sj4alqnu",
+            api_base: "https://api-iam.intercom.io",
+            app_id: "sj4alqnu",
         };
-      </script>
-      
-      
-      <script>
+    </script>
+
+
+    <script>
         // Preenchemos previamente o ID do seu aplicativo no URL do widget: 'https://widget.intercom.io/widget/sj4alqnu'
-        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/sj4alqnu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-      </script>
-
-  <div class="class"></div>
-
-	
+        (function () {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', w.intercomSettings);
+            } else {
+                var d = document;
+                var i = function () {
+                    i.c(arguments);
+                };
+                i.q = [];
+                i.c = function (args) {
+                    i.q.push(args);
+                };
+                w.Intercom = i;
+                var l = function () {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://widget.intercom.io/widget/sj4alqnu';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                };
+                if (document.readyState === 'complete') {
+                    l();
+                } else if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })();
+    </script>
 </body>
+
 </html>
